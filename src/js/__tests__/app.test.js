@@ -1,5 +1,4 @@
-import ArrayBufferConverter from "../app";
-import {getBuffer} from "../app";
+import ArrayBufferConverter, { getBuffer } from '../app';
 
 test('String should be returned', () => {
   const converter = new ArrayBufferConverter();

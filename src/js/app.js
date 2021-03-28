@@ -3,6 +3,7 @@ export function getBuffer() {
   return ((input) => {
     const buffer = new ArrayBuffer(data.length * 2);
     const bufferView = new Uint16Array(buffer);
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < input.length; i++) {
       bufferView[i] = input.charCodeAt(i);
     }
@@ -11,8 +12,6 @@ export function getBuffer() {
 }
 
 export default class ArrayBufferConverter {
-  constructor(buffer) {
-  }
   load(buffer) {
     this.buffer = buffer;
   }
